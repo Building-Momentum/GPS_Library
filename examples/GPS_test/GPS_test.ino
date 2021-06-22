@@ -17,7 +17,7 @@
 // BuildMo_GPS GPS(&GPSSerial);
 
 // If you are using software serial, make sure the two lines below are uncommented. (ARDUINO UNO)
-SoftwareSerial mySerial(3, 2);
+SoftwareSerial mySerial(3, 2);  // (Rx,Tx)
 BuildMo_GPS GPS(&mySerial);
 
 bool GPSfix;
