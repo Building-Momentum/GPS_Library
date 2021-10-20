@@ -101,7 +101,7 @@ bool BuildMo_GPS::begin(uint32_t baudrate) {
 }
 
 // Function for determining if an NMEA sentence is available.
-// Each time this function is called, it determines if serial data is availble, 
+// Each time this function is called, it determines if serial data is available, 
 // organizes it into an incoming buffer, and calculates the checksum as data arrives.
 bool BuildMo_GPS::NMEAavailable(void){
 	if (available()){
