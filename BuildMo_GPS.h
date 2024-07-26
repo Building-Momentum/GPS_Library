@@ -11,11 +11,13 @@
   
   Authors: A. Vega
   
-  Version: v01
+  Version: v02
   
   Release date: 21 JUN 2021
+  Update date: 26 JUL 2024
   
-  Changes from previous version: n/a
+  Changes from previous version: 
+      -Updated the RMC only definition
   
 */
 /**************************************************************************/
@@ -31,14 +33,14 @@
 #define PMTK_SET_NMEA_UPDATE_1HZ 				"$PMTK220,1000*1F"  // 1 Hz
 #define PMTK_SET_NMEA_UPDATE_2HZ 				"$PMTK220,500*2B"   // 2 Hz
 
-#define PMTK_SET_BAUD_9600 						"$PMTK251,9600*17"  // 9600 bps
+#define PMTK_SET_BAUD_9600 						  "$PMTK251,9600*17"  // 9600 bps
 
-#define PMTK_SET_NMEA_OUTPUT_RMCONLY			"$PMTK314,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*29" // Turn on only the GPRMC sentence
+#define PMTK_SET_NMEA_OUTPUT_RMCONLY		"$PMTK314,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0*29" // Turn on only the GPRMC sentence
 
-#define PMTK_ENABLE_SBAS						"$PMTK313,1*2E" // Enable SBAS satellite (only works with 1Hz output rate)
-#define PMTK_ENABLE_WAAS 						"$PMTK301,2*2E" // Use WAAS for DGPS correction data
+#define PMTK_ENABLE_SBAS						    "$PMTK313,1*2E" // Enable SBAS satellite (only works with 1Hz output rate)
+#define PMTK_ENABLE_WAAS 						    "$PMTK301,2*2E" // Use WAAS for DGPS correction data
 
-#define PGCMD_NOANTENNA 						"$PGCMD,33,0*6D" // don't show antenna status messages
+#define PGCMD_NOANTENNA 						    "$PGCMD,33,0*6D" // don't show antenna status messages
 
 class BuildMo_GPS : public Print {
 public:
